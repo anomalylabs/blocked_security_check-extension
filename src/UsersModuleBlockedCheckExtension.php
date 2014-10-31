@@ -1,6 +1,6 @@
 <?php namespace Anomaly\Streams\Addon\Extension\UsersModuleBlockedCheck;
 
-use Anomaly\Streams\Addon\Module\Users\Block\BlockModel;
+use Anomaly\Streams\Addon\Module\Users\Block\Contract\BlockRepositoryInterface;
 use Anomaly\Streams\Addon\Module\Users\Exception\UserBlockedException;
 use Anomaly\Streams\Addon\Module\Users\Extension\CheckInterface;
 use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
@@ -17,7 +17,22 @@ use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
 class UsersModuleBlockedCheckExtension extends ExtensionAddon implements CheckInterface
 {
 
-    // TODO: make addons from IoC so the constructors are sexy.
+    /**
+     * The block repository object.
+     *
+     * @var
+     */
+    protected $blocks;
+
+    /**
+     * Create a new UsersModuleBlockedCheckExtension instance.
+     *
+     * @param BlockRepositoryInterface $blocks
+     */
+    function __construct(BlockRepositoryInterface $blocks)
+    {
+        $this->blocks = $blocks;
+    }
 
     /**
      * Security check during login.
@@ -47,9 +62,7 @@ class UsersModuleBlockedCheckExtension extends ExtensionAddon implements CheckIn
      */
     protected function checkBlockedStatus(UserInterface $user)
     {
-        $repository = new BlockModel();
-
-        if ($block = $repository->findBlockByUserId($user->getId())) {
+        if ($block = $this->blocks->findBlockByUserId($user->getId())) {
 
             throw new UserBlockedException("Your account has been blocked.");
         }
