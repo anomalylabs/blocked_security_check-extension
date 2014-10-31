@@ -49,7 +49,7 @@ class UsersModuleBlockedCheckExtension extends ExtensionAddon implements CheckIn
     {
         $repository = new BlockModel();
 
-        if ($block = $repository->findBlockByUserId($user->getUserId())) {
+        if ($block = $repository->findBlockByUserId($user->getId())) {
 
             throw new UserBlockedException("Your account has been blocked.");
         }
