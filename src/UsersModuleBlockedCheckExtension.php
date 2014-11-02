@@ -1,7 +1,6 @@
 <?php namespace Anomaly\Streams\Addon\Extension\UsersModuleBlockedCheck;
 
-use Anomaly\Streams\Addon\Module\Users\Extension\CheckInterface;
-use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
+use Anomaly\Streams\Addon\Module\Users\Extension\CheckExtension;
 
 /**
  * Class UsersModuleBlockedCheckExtension
@@ -11,17 +10,8 @@ use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleBlockedCheckExtension
  */
-class UsersModuleBlockedCheckExtension extends ExtensionAddon implements CheckInterface
+class UsersModuleBlockedCheckExtension extends CheckExtension
 {
 
-    /**
-     * Return the handler class.
-     *
-     * @return null|string
-     */
-    public function toHandler()
-    {
-        return $this->transform(__METHOD__);
-    }
 }
  
