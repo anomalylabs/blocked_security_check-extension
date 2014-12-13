@@ -1,8 +1,8 @@
 <?php namespace Anomaly\Streams\Addon\Extension\UsersModuleBlockedCheck;
 
 use Anomaly\Streams\Addon\Module\Users\Block\Contract\BlockInterface;
-use Anomaly\Streams\Addon\Module\Users\Extension\CheckExtension;
 use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
+use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
 /**
  * Class UsersModuleBlockedCheckExtension
@@ -12,7 +12,7 @@ use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleBlockedCheckExtension
  */
-class UsersModuleBlockedCheckExtension extends CheckExtension
+class UsersModuleBlockedCheckExtension extends Extension
 {
 
     /**
