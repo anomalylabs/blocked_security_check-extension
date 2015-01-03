@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\Extension\UsersModuleBlockedCheck;
+<?php namespace Anomaly\UsersModuleBlockedCheckExtension;
 
 /**
  * Class UserBlockedException

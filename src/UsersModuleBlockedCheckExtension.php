@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\Extension\UsersModuleBlockedCheck;
+<?php namespace Anomaly\UsersModuleBlockedCheckExtension;
 
 use Anomaly\Streams\Addon\Module\Users\Block\Contract\BlockInterface;
 use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
