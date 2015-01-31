@@ -2,6 +2,7 @@
 
 use Anomaly\UsersModule\User\Contract\UserInterface;
 use Anomaly\UsersModule\User\UserCheck;
+use Illuminate\Http\Request;
 
 /**
  * Class BlockedCheckExtension
@@ -15,20 +16,19 @@ class BlockedCheckExtension extends UserCheck
 {
 
     /**
+     * This extension provides a security check
+     * for users that assures the user is not blocked.
+     *
+     * @var string
+     */
+    protected $provides = 'anomaly.module.users::check.blocked';
+
+    /**
      * Check authorization of the current user.
      *
      * @param UserInterface $user
      */
-    public function check(UserInterface $user = null)
-    {
-    }
-
-    /**
-     * Check authorization of the current user during login.
-     *
-     * @param UserInterface $user
-     */
-    public function checkLogin(UserInterface $user = null)
+    public function check(UserInterface $user = null, Request $request)
     {
     }
 }
