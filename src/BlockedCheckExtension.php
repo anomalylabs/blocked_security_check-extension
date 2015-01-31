@@ -21,7 +21,6 @@ class BlockedCheckExtension extends UserCheck
      */
     public function check(UserInterface $user = null)
     {
-        // TODO: Implement check() method.
     }
 
     /**
@@ -31,7 +30,6 @@ class BlockedCheckExtension extends UserCheck
      */
     public function checkLogin(UserInterface $user = null)
     {
-        // TODO: Implement checkLogin() method.
     }
 }
  
