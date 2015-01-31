@@ -1,18 +1,19 @@
-<?php namespace Anomaly\BlockedCheckExtension;
+<?php namespace Anomaly\BlockedSecurityCheckExtension;
 
 use Anomaly\UsersModule\Security\SecurityCheckExtension;
 use Anomaly\UsersModule\User\Contract\UserInterface;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 /**
- * Class BlockedCheckExtension
+ * Class BlockedSecurityCheckExtension
  *
  * @link          http://anomaly.is/streams-platform
  * @author        AnomalyLabs, Inc. <hello@anomaly.is>
  * @author        Ryan Thompson <ryan@anomaly.is>
- * @package       Anomaly\Streams\Addon\Extension\BlockedCheckExtension
+ * @package       Anomaly\Streams\Addon\Extension\BlockedSecurityCheckExtension
  */
-class BlockedCheckExtension extends SecurityCheckExtension
+class BlockedSecurityCheckExtension extends SecurityCheckExtension
 {
 
     /**
@@ -21,14 +22,16 @@ class BlockedCheckExtension extends SecurityCheckExtension
      *
      * @var string
      */
-    protected $provides = 'anomaly.module.users::check.blocked';
+    protected $provides = 'anomaly.module.users::security_check.blocked';
 
     /**
-     * Check authorization of the current user.
+     * Run the security check.
      *
+     * @param Request       $request
      * @param UserInterface $user
+     * @return void|Response
      */
-    public function check(UserInterface $user = null, Request $request)
+    public function check(Request $request, UserInterface $user = null)
     {
     }
 }
