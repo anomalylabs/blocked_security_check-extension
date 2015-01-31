@@ -28,7 +28,7 @@ class BlockedCheckExtension extends SecurityCheckExtension
      *
      * @param UserInterface $user
      */
-    public function check(UserInterface $user = null, Request $request)
+    public function check(UserInterface $user = null)
     {
     }
 }
