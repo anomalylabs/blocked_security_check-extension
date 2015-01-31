@@ -65,7 +65,7 @@ class BlockedSecurityCheckExtension extends SecurityCheckExtension
 
             app('auth')->logout($user);
 
-            $this->messages->error(trans('anomaly.extension.blocked_security_check::error.blocked'));
+            $this->messages->error('anomaly.extension.blocked_security_check::error.blocked');
 
             return redirect('admin/login');
         }
