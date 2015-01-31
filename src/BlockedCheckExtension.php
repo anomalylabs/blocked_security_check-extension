@@ -1,7 +1,7 @@
 <?php namespace Anomaly\BlockedCheckExtension;
 
+use Anomaly\UsersModule\Security\SecurityCheckExtension;
 use Anomaly\UsersModule\User\Contract\UserInterface;
-use Anomaly\UsersModule\User\UserCheck;
 use Illuminate\Http\Request;
 
 /**
@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\BlockedCheckExtension
  */
-class BlockedCheckExtension extends UserCheck
+class BlockedCheckExtension extends SecurityCheckExtension
 {
 
     /**
