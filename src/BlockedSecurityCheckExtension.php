@@ -63,7 +63,7 @@ class BlockedSecurityCheckExtension extends SecurityCheckExtension
     {
         if ($user && $user->isBlocked()) {
 
-            app('auth')->logout($user);
+            $this->guard->logout($user);
 
             $this->messages->error('anomaly.extension.blocked_security_check::error.blocked');
 
