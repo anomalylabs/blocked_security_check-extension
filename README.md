@@ -1,3 +1,3 @@
-# Suspension Check
+# Suspension Security Check
 
 This is a suspension security check extension for the Users module.

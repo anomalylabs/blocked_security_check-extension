@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name'        => 'Suspension SecurityChecker  Check',
-    'description' => 'A security extension that assures users are not suspended.'
+    'name'        => 'Suspended User Security Check',
+    'description' => 'A security check extension that assures users are not suspended.'
 ];

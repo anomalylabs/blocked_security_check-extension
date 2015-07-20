@@ -2,12 +2,25 @@
     "name": "anomaly/suspension_security_check-extension",
     "type": "streams-addon",
     "description": "A security extension that assures users are not suspension.",
+    "keywords": [
+        "streams extension",
+        "streams addon",
+        "extension"
+    ],
+    "homepage": "http://anomaly.is/",
+    "version": "1.0.0",
+    "license": "MIT",
     "authors": [
         {
-            "name": "AnomalyLabs",
-            "email": "hello@anomaly.is"
+            "name": "AnomalyLabs, Inc.",
+            "email": "hello@anomaly.is",
+            "homepage": "http://anomaly.is/",
+            "role": "Owner"
         }
     ],
+    "support": {
+        "email": "support@anomaly.is"
+    },
     "autoload": {
         "psr-4": {
             "Anomaly\\SuspensionSecurityCheckExtension\\": "src/"
@@ -15,8 +28,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-1.0/master": "1.0.x-dev"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
