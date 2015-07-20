@@ -1,7 +1,7 @@
 {
     "name": "anomaly/suspension_security_check-extension",
     "type": "streams-addon",
-    "description": "A security extension that assures users are not suspension.",
+    "description": "A security check extension that assures users are not suspended.",
     "keywords": [
         "streams extension",
         "streams addon",
