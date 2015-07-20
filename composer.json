@@ -1,7 +1,7 @@
 {
-    "name": "anomaly/blocked_security_check-extension",
+    "name": "anomaly/suspension_security_check-extension",
     "type": "streams-addon",
-    "description": "A security extension that assures users are not blocked.",
+    "description": "A security extension that assures users are not suspension.",
     "authors": [
         {
             "name": "AnomalyLabs",
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Anomaly\\BlockedSecurityCheckExtension\\": "src/"
+            "Anomaly\\SuspensionSecurityCheckExtension\\": "src/"
         }
     },
     "extra": {

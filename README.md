@@ -1,3 +1,3 @@
-# Blocked Check
+# Suspension Check
 
-This is a blocked users security check extension for the Users module.
+This is a suspension security check extension for the Users module.

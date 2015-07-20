@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'blocked' => 'Your account has been blocked.'
+    'suspension' => 'Your account has been suspension.'
 ];
