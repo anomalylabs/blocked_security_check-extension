@@ -1,6 +1,6 @@
 <?php namespace Anomaly\SuspensionSecurityCheckExtension;
 
-use Anomaly\UsersModule\Security\SecurityCheckExtension;
+use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
 /**
  * Class SuspensionSecurityCheckExtension
@@ -10,7 +10,7 @@ use Anomaly\UsersModule\Security\SecurityCheckExtension;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\SuspensionSecurityCheckExtension
  */
-class SuspensionSecurityCheckExtension extends SecurityCheckExtension
+class SuspensionSecurityCheckExtension extends Extension
 {
 
     /**
