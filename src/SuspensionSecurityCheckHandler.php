@@ -49,7 +49,7 @@ class SuspensionSecurityCheckHandler
      */
     public function handle(UserInterface $user = null)
     {
-        if ($user && $user->isSuspended()) {
+        if ($user && !$user->isEnabled()) {
 
             $this->authenticator->kickOut($user, 'suspended');
 
